@@ -4,9 +4,9 @@ namespace App\models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Exercise extends Model {
+class User extends Model {
     
     public $timestamps = true;
 
-    protected $fillable = ['name', 'muscle_group', 'description'];
+    protected $fillable = ['username', 'email', 'password'];
 }
