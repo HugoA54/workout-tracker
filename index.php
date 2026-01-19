@@ -1,19 +1,9 @@
 <?php
-require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../src/config/db.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-use App\models\Exercise; 
-use App\models\Set;
+require_once __DIR__ . '/src/config/db.php';
 
-echo "<h1>Bienvenue sur mon Tracker de Muscu</h1>";
+use App\Dispatcher;
 
-try {
-    $exos = Set::where('reps', '=', '12')->get();
-
-    echo "<pre>";
-    print_r($exos->toArray()); 
-    echo "</pre>";
-
-} catch (Exception $e) {
-    echo "Erreur : " . $e->getMessage();
-}
+$router = new Dispatcher();
+$router->run();
