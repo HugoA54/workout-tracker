@@ -1,0 +1,29 @@
+1. Créer le Contrôleur (src/controllers/ExerciseController.php)
+C'est le fichier manquant que mon Dispatcher essaie d'appeler.
+
+À faire : Créer le fichier ExerciseController.php dans le dossier controllers.
+
+Vigilance : Bien vérifier le namespace pour qu'il colle à mon dossier (attention aux majuscules/minuscules).
+
+Logique : Dans la méthode listExercises(), je dois demander à Eloquent de tout récupérer (Exercise::all()) et inclure la vue correspondante.
+
+2. Créer la Vue (src/views/exercises/list.php)
+C'est ici que je vais coder mon HTML.
+
+À faire : Créer le sous-dossier exercises dans src/views, puis le fichier list.php.
+
+Contenu : Mettre la structure HTML de base (<html>...) et utiliser une boucle foreach pour afficher les données que le contrôleur m'a passées (Nom de l'exo, groupe musculaire).
+
+3. Vérifier les données 
+Pour éviter de debuguer une page blanche alors que le code marche.
+
+À faire : Aller dans phpMyAdmin et insérer manuellement 2 ou 3 exercices (ex: "Squat", "Tractions") dans la table exercises. Comme ça, j'aurai quelque chose à afficher.
+
+Ma "To-Do List" immédiate :
+[ ] Créer src/controllers/ExerciseController.php
+
+[ ] Créer src/views/exercises/list.php
+
+[ ] Insérer des données de test en BDD
+
+[ ] Tester l'URL : http://localhost/.../public/index.php?page=exercises
