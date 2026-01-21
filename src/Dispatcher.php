@@ -11,7 +11,8 @@ class Dispatcher {
 
         switch ($page) {
             case 'exercises':
-                $html =  "<h1>Liste des exercices</h1>";
+                $controller = new ExerciseController();
+                $html = $controller->listExercises();
                 $this->genererPage($html);
                 break;
             
